@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+    GameVerse — Modern Gaming Website | Developer Portfolio Project
+    Tech: HTML5, CSS3, Bootstrap 5, Vanilla JS (no backend)
+    Author: Your Name — Front-End Developer
+  ============================================================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GameVerse — Discover featured games, reviews, news and gaming community. A modern dark gaming website built with HTML, CSS, Bootstrap 5 and Vanilla JS." />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>GameVerse | Play Beyond Limits</title>
+
+  <!-- Favicon (inline SVG, no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
+
+  <!-- Google Fonts: Orbitron (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="#home">
+        <i class="bi bi-controller me-2"></i>Game<span>Verse</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#featured">Featured</a></li>
+          <li class="nav-item"><a class="nav-link" href="#popular">Popular</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categories">Platforms</a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Community</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#featured" class="btn btn-accent ms-lg-3 mt-2 mt-lg-0">Play Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== 1. HERO ==================== -->
+  <header id="home" class="hero-section d-flex align-items-center">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative hero-content">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
+          <span class="hero-badge reveal"><i class="bi bi-lightning-charge-fill me-1"></i> #1 Gaming Hub 2026</span>
+          <h1 class="hero-title reveal">PLAY BEYOND <span class="text-gradient">LIMITS</span></h1>
+          <p class="hero-subtitle reveal">
+            Discover epic titles, honest reviews and breaking gaming news.
+            From GTA VI to Elden Ring — your next adventure starts here.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3 mt-4 reveal">
+            <a href="#featured" class="btn btn-accent btn-lg"><i class="bi bi-play-fill me-1"></i> Explore Games</a>
+            <a href="#news" class="btn btn-outline-light btn-lg"><i class="bi bi-newspaper me-1"></i> Latest News</a>
+          </div>
+          <!-- Hero stats -->
+          <div class="row hero-stats mt-5 g-3 reveal">
+            <div class="col-4">
+              <div class="stat-box">
+                <h3><span class="counter" data-count="500">0</span>+</h3>
+                <p>Games Reviewed</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-box">
+                <h3><span class="counter" data-count="120">0</span>K</h3>
+                <p>Active Gamers</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-box">
+                <h3><span class="counter" data-count="98">0</span>%</h3>
+                <p>Positive Ratings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#featured" class="scroll-down" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
+  </header>
+
+  <main>
+    <!-- ==================== 2. FEATURED GAMES ==================== -->
+    <section id="featured" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">🔥 Trending Now</span>
+          <h2>Featured Games</h2>
+          <p>Hand-picked blockbusters everyone is playing right now.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Cyberpunk 2077 -->
+          <div class="col-md-4 reveal">
+            <article class="game-card featured-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=800&auto=format&fit=crop"
+                     class="card-img-top" alt="Cyberpunk 2077 neon Night City" loading="lazy" />
+                <span class="badge-platform">PC • PS5 • Xbox</span>
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.2</span>
+              </div>
+              <div class="card-body">
+                <h5>Cyberpunk 2077: Phantom Liberty</h5>
+                <p class="text-muted small">Night City never looked better. Immersive open-world RPG with a thrilling spy expansion.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <span class="price">$39.99</span>
+                  <button class="btn btn-sm btn-accent btn-details" data-game="Cyberpunk 2077">Details</button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- GTA VI -->
+          <div class="col-md-4 reveal">
+            <article class="game-card featured-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=800&auto=format&fit=crop"
+                     class="card-img-top" alt="GTA VI Vice City night lights" loading="lazy" />
+                <span class="badge-platform">PS5 • Xbox Series</span>
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.8</span>
+                <span class="badge-hot">Most Wanted</span>
+              </div>
+              <div class="card-body">
+                <h5>Grand Theft Auto VI</h5>
+                <p class="text-muted small">Return to Vice City. The biggest open-world launch in gaming history is almost here.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <span class="price">Pre-order</span>
+                  <button class="btn btn-sm btn-accent btn-details" data-game="GTA VI">Details</button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Elden Ring -->
+          <div class="col-md-4 reveal">
+            <article class="game-card featured-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop"
+                     class="card-img-top" alt="Elden Ring dark fantasy world" loading="lazy" />
+                <span class="badge-platform">All Platforms</span>
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.6</span>
+              </div>
+              <div class="card-body">
+                <h5>Elden Ring: Shadow of the Erdtree</h5>
+                <p class="text-muted small">FromSoftware's masterpiece returns with a brutal, beautiful new realm to conquer.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <span class="price">$59.99</span>
+                  <button class="btn btn-sm btn-accent btn-details" data-game="Elden Ring">Details</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. POPULAR GAMES (with filter) ==================== -->
+    <section id="popular" class="section-padding bg-darker">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">🎮 Top Rated</span>
+          <h2>Popular Games</h2>
+          <p>Filter the library by genre and find your next obsession.</p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="text-center mb-4 reveal" role="group" aria-label="Filter games">
+          <button class="btn btn-filter active" data-filter="all">All</button>
+          <button class="btn btn-filter" data-filter="action">Action</button>
+          <button class="btn btn-filter" data-filter="rpg">RPG</button>
+          <button class="btn btn-filter" data-filter="open-world">Open World</button>
+          <button class="btn btn-filter" data-filter="adventure">Adventure</button>
+        </div>
+
+        <div class="row g-4" id="gameGrid">
+          <!-- GTA V -->
+          <div class="col-sm-6 col-lg-3 game-item reveal" data-category="open-world action">
+            <article class="game-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=600&auto=format&fit=crop" alt="GTA V sports car" loading="lazy" />
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.5</span>
+              </div>
+              <div class="card-body">
+                <span class="genre">Open World</span>
+                <h6>GTA V</h6>
+                <div class="stars" data-rating="5"></div>
+                <small class="text-muted">PC • PS5 • Xbox</small>
+              </div>
+            </article>
+          </div>
+          <!-- RDR2 -->
+          <div class="col-sm-6 col-lg-3 game-item reveal" data-category="open-world adventure">
+            <article class="game-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600&auto=format&fit=crop" alt="Red Dead Redemption 2 western desert road" loading="lazy" />
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.7</span>
+              </div>
+              <div class="card-body">
+                <span class="genre">Open World</span>
+                <h6>Red Dead Redemption 2</h6>
+                <div class="stars" data-rating="5"></div>
+                <small class="text-muted">PC • PS4 • Xbox</small>
+              </div>
+            </article>
+          </div>
+          <!-- God of War -->
+          <div class="col-sm-6 col-lg-3 game-item reveal" data-category="action adventure">
+            <article class="game-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="God of War snowy mountains" loading="lazy" />
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.4</span>
+              </div>
+              <div class="card-body">
+                <span class="genre">Action</span>
+                <h6>God of War Ragnarök</h6>
+                <div class="stars" data-rating="5"></div>
+                <small class="text-muted">PS5 • PC</small>
+              </div>
+            </article>
+          </div>
+          <!-- Elden Ring -->
+          <div class="col-sm-6 col-lg-3 game-item reveal" data-category="rpg action">
+            <article class="game-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=600&auto=format&fit=crop" alt="Elden Ring misty fantasy lands" loading="lazy" />
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.6</span>
+              </div>
+              <div class="card-body">
+                <span class="genre">RPG</span>
+                <h6>Elden Ring</h6>
+                <div class="stars" data-rating="5"></div>
+                <small class="text-muted">All Platforms</small>
+              </div>
+            </article>
+          </div>
+          <!-- Minecraft -->
+          <div class="col-sm-6 col-lg-3 game-item reveal" data-category="adventure open-world">
+            <article class="game-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600&auto=format&fit=crop" alt="Minecraft arcade neon" loading="lazy" />
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.0</span>
+              </div>
+              <div class="card-body">
+                <span class="genre">Adventure</span>
+                <h6>Minecraft</h6>
+                <div class="stars" data-rating="4"></div>
+                <small class="text-muted">PC • Mobile • Console</small>
+              </div>
+            </article>
+          </div>
+          <!-- Witcher 3 -->
+          <div class="col-sm-6 col-lg-3 game-item reveal" data-category="rpg open-world">
+            <article class="game-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=600&auto=format&fit=crop" alt="The Witcher 3 dark forest" loading="lazy" />
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.3</span>
+              </div>
+              <div class="card-body">
+                <span class="genre">RPG</span>
+                <h6>The Witcher 3</h6>
+                <div class="stars" data-rating="5"></div>
+                <small class="text-muted">PC • PS5 • Xbox • Switch</small>
+              </div>
+            </article>
+          </div>
+          <!-- Cyberpunk -->
+          <div class="col-sm-6 col-lg-3 game-item reveal" data-category="rpg action">
+            <article class="game-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop" alt="Cyberpunk 2077 retro neon" loading="lazy" />
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 9.2</span>
+              </div>
+              <div class="card-body">
+                <span class="genre">RPG</span>
+                <h6>Cyberpunk 2077</h6>
+                <div class="stars" data-rating="4"></div>
+                <small class="text-muted">PC • PS5 • Xbox</small>
+              </div>
+            </article>
+          </div>
+          <!-- Horizon -->
+          <div class="col-sm-6 col-lg-3 game-item reveal" data-category="adventure action">
+            <article class="game-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop" alt="Horizon Forbidden West nature landscape" loading="lazy" />
+                <span class="badge-rating"><i class="bi bi-star-fill"></i> 8.9</span>
+              </div>
+              <div class="card-body">
+                <span class="genre">Adventure</span>
+                <h6>Horizon Forbidden West</h6>
+                <div class="stars" data-rating="4"></div>
+                <small class="text-muted">PS5 • PC</small>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p id="noResults" class="text-center text-muted mt-4 d-none">No games found in this category.</p>
+      </div>
+    </section>
+
+    <!-- ==================== 6. GAME CATEGORIES ==================== -->
+    <section id="categories" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">🕹️ Platforms</span>
+          <h2>Game Categories</h2>
+          <p>Browse by your favorite platform.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-6 col-lg-3 reveal">
+            <div class="platform-card text-center h-100">
+              <div class="platform-icon"><i class="bi bi-pc-display"></i></div>
+              <h5>PC Gaming</h5>
+              <p class="small text-muted">2,400+ titles • Steam, Epic</p>
+              <a href="#popular" class="stretched-link link-accent small">Browse PC games →</a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="platform-card text-center h-100">
+              <div class="platform-icon ps"><i class="bi bi-playstation"></i></div>
+              <h5>PlayStation</h5>
+              <p class="small text-muted">1,800+ titles • PS4 & PS5</p>
+              <a href="#popular" class="stretched-link link-accent small">Browse PS games →</a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="platform-card text-center h-100">
+              <div class="platform-icon xbox"><i class="bi bi-xbox"></i></div>
+              <h5>Xbox</h5>
+              <p class="small text-muted">1,600+ titles • Game Pass</p>
+              <a href="#popular" class="stretched-link link-accent small">Browse Xbox games →</a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="platform-card text-center h-100">
+              <div class="platform-icon nintendo"><i class="bi bi-nintendo-switch"></i></div>
+              <h5>Nintendo</h5>
+              <p class="small text-muted">900+ titles • Switch & OLED</p>
+              <a href="#popular" class="stretched-link link-accent small">Browse Switch games →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. LATEST GAMING NEWS ==================== -->
+    <section id="news" class="section-padding bg-darker">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 reveal">
+          <div class="section-header text-start m-0">
+            <span class="section-tag">📰 Fresh Updates</span>
+            <h2>Latest Gaming News</h2>
+          </div>
+          <a href="#news" class="btn btn-outline-accent btn-sm">View All News</a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="game-card news-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=600&auto=format&fit=crop" alt="GTA VI trailer news" loading="lazy" />
+                <span class="badge-news">GTA VI</span>
+              </div>
+              <div class="card-body">
+                <small class="text-muted"><i class="bi bi-calendar3 me-1"></i> Sep 12, 2026 • 5 min read</small>
+                <h6 class="mt-2">GTA VI Second Trailer Breaks 200M Views in 48 Hours</h6>
+                <p class="small text-muted">Rockstar's return to Vice City sets a new YouTube gaming record. Here's what we spotted.</p>
+                <a href="#news" class="link-accent small read-more">Read More →</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="game-card news-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?q=80&w=600&auto=format&fit=crop" alt="PlayStation 5 Pro console" loading="lazy" />
+                <span class="badge-news">Hardware</span>
+              </div>
+              <div class="card-body">
+                <small class="text-muted"><i class="bi bi-calendar3 me-1"></i> Sep 8, 2026 • 4 min read</small>
+                <h6 class="mt-2">PS5 Pro Review: Is the 4K/120fps Upgrade Worth It?</h6>
+                <p class="small text-muted">We tested Cyberpunk, Elden Ring and God of War on Sony's mid-gen beast.</p>
+                <a href="#news" class="link-accent small read-more">Read More →</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="game-card news-card h-100">
+              <div class="card-img-wrap">
+                <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?q=80&w=600&auto=format&fit=crop" alt="Gamescom gaming event crowd" loading="lazy" />
+                <span class="badge-news">Events</span>
+              </div>
+              <div class="card-body">
+                <small class="text-muted"><i class="bi bi-calendar3 me-1"></i> Sep 2, 2026 • 6 min read</small>
+                <h6 class="mt-2">Gamescom 2026: 10 Biggest Announcements You Missed</h6>
+                <p class="small text-muted">New Witcher footage, Xbox handheld tease, and a surprise Elden Ring collab.</p>
+                <a href="#news" class="link-accent small read-more">Read More →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. GAME REVIEWS & RATINGS ==================== -->
+    <section id="reviews" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">⭐ Honest Opinions</span>
+          <h2>Game Reviews & Ratings</h2>
+          <p>In-depth reviews from real players — no sponsored scores.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Review 1 -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="review-card h-100">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="score-circle score-high">9.7</div>
+                <div class="stars" data-rating="5"></div>
+              </div>
+              <h6 class="mt-3">Red Dead Redemption 2</h6>
+              <small class="text-muted">Rockstar Games • Open World</small>
+              <p class="small mt-2">"A storytelling masterpiece. Every ride through the frontier feels alive."</p>
+              <div class="review-bar"><span style="width:97%"></span></div>
+              <small class="text-muted">— Marcus T., Verified Player</small>
+            </article>
+          </div>
+          <!-- Review 2 -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="review-card h-100">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="score-circle score-high">9.6</div>
+                <div class="stars" data-rating="5"></div>
+              </div>
+              <h6 class="mt-3">Elden Ring</h6>
+              <small class="text-muted">FromSoftware • RPG</small>
+              <p class="small mt-2">"Brutal but fair. The Lands Between reward every brave explorer."</p>
+              <div class="review-bar"><span style="width:96%"></span></div>
+              <small class="text-muted">— Aisha K., Souls Veteran</small>
+            </article>
+          </div>
+          <!-- Review 3 -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="review-card h-100">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="score-circle score-good">9.2</div>
+                <div class="stars" data-rating="4"></div>
+              </div>
+              <h6 class="mt-3">Cyberpunk 2077</h6>
+              <small class="text-muted">CD Projekt Red • RPG</small>
+              <p class="small mt-2">"Phantom Liberty fixed everything. Night City is finally the dream."</p>
+              <div class="review-bar"><span style="width:92%"></span></div>
+              <small class="text-muted">— Diego R., PC Gamer</small>
+            </article>
+          </div>
+          <!-- Review 4 -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="review-card h-100">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="score-circle score-good">9.4</div>
+                <div class="stars" data-rating="5"></div>
+              </div>
+              <h6 class="mt-3">God of War Ragnarök</h6>
+              <small class="text-muted">Santa Monica • Action</small>
+              <p class="small mt-2">"Kratos and Atreus deliver cinema-grade emotion and combat."</p>
+              <div class="review-bar"><span style="width:94%"></span></div>
+              <small class="text-muted">— Yuki S., PS5 Player</small>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. ABOUT / COMMUNITY ==================== -->
+    <section id="about" class="section-padding bg-darker">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal">
+            <img src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?q=80&w=800&auto=format&fit=crop"
+                 class="img-fluid rounded-4 about-img" alt="Gaming setup with RGB lights" loading="lazy" />
+          </div>
+          <div class="col-lg-6 reveal">
+            <span class="section-tag">🤝 Join 120K+ Gamers</span>
+            <h2 class="mt-2">More Than a Website.<br />A Gaming Community.</h2>
+            <p class="text-muted mt-3">
+              GameVerse was built by gamers, for gamers. We share honest reviews,
+              host weekly tournaments, and help you discover hidden gems across
+              PC, PlayStation, Xbox and Nintendo.
+            </p>
+            <ul class="community-list mt-3">
+              <li><i class="bi bi-check-circle-fill"></i> Weekly tournaments with real prizes</li>
+              <li><i class="bi bi-check-circle-fill"></i> Spoiler-free reviews within 48h of launch</li>
+              <li><i class="bi bi-check-circle-fill"></i> Active Discord with 40K+ members</li>
+            </ul>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#contact" class="btn btn-accent"><i class="bi bi-discord me-1"></i> Join Discord</a>
+              <a href="#contact" class="btn btn-outline-light">Our Story</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. CONTACT ==================== -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">✉️ Get In Touch</span>
+          <h2>Contact Us</h2>
+          <p>Tips, partnerships, review requests — we reply within 24 hours.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Info -->
+          <div class="col-lg-4 reveal">
+            <div class="contact-info h-100">
+              <div class="contact-item">
+                <i class="bi bi-envelope-fill"></i>
+                <div><h6>Email</h6><small class="text-muted">hello@gameverse.gg</small></div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-discord"></i>
+                <div><h6>Discord</h6><small class="text-muted">discord.gg/gameverse</small></div>
+              </div>
+              <div class="contact-item">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div><h6>Location</h6><small class="text-muted">Remote • Worldwide</small></div>
+              </div>
+              <div class="social-row mt-3">
+                <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="#" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Form -->
+          <div class="col-lg-8 reveal">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="John Carter" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" id="email" class="form-control" placeholder="you@example.com" required />
+                </div>
+                <div class="col-12">
+                  <label for="subject" class="form-label">Subject</label>
+                  <select id="subject" class="form-select">
+                    <option>Game review request</option>
+                    <option>News tip</option>
+                    <option>Partnership</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" class="form-control" rows="4" placeholder="Tell us what's on your mind..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-accent"><i class="bi bi-send me-1"></i> Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 9. FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 py-5">
+        <div class="col-md-6 col-lg-4">
+          <a class="brand-logo mb-3 d-inline-block" href="#home"><i class="bi bi-controller me-2"></i>Game<span>Verse</span></a>
+          <p class="small text-muted">Your home for honest game reviews, breaking news and a passionate global community. Built with HTML, CSS, Bootstrap 5 & Vanilla JS.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Twitch"><i class="bi bi-twitch"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Explore</h6>
+          <ul class="footer-links">
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#popular">Popular</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6>Platforms</h6>
+          <ul class="footer-links">
+            <li><a href="#categories">PC Gaming</a></li>
+            <li><a href="#categories">PlayStation 5</a></li>
+            <li><a href="#categories">Xbox Series X</a></li>
+            <li><a href="#categories">Nintendo Switch</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h6>Newsletter</h6>
+          <p class="small text-muted">Weekly drops. No spam, unsubscribe anytime.</p>
+          <form id="newsletterForm" class="d-flex gap-2" novalidate>
+            <input type="email" id="newsletterEmail" class="form-control form-control-sm" placeholder="Your email" required aria-label="Email for newsletter" />
+            <button class="btn btn-accent btn-sm" type="submit"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <small class="text-muted">© <span id="year">2026</span> GameVerse. Portfolio project by <strong>Your Name</strong>. All rights reserved.</small>
+        <small><a href="#home" class="link-accent me-3">Privacy</a><a href="#home" class="link-accent">Terms</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Toast for form feedback -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="siteToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMsg">Message sent!</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game details modal -->
+  <div class="modal fade" id="gameModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gameModalTitle">Game Details</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="gameModalBody">Loading...</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-light btn-sm" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-accent btn-sm">Add to Wishlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
